@@ -1,0 +1,62 @@
+# -*- coding: utf-8 -*-
+import math
+print('欢迎使用maimai单曲rt计算程序')
+dingShu = float(input('请输入定数'))
+dachenglv = float(input('请输入达成率（省略百分号）'))
+if dachenglv >= 100.5:
+    pinji = 'SSS+'
+    xishu = 22.4
+elif dachenglv >= 100:
+    pinji = 'SSS'
+    xishu = 21.6
+elif dachenglv >= 99.5:
+    pinji = 'SS+'
+    xishu = 21.1
+elif dachenglv >= 99:
+    pinji = 'SS'
+    xishu = 20.8
+elif dachenglv >= 98:
+    pinji = 'S+'
+    xishu = 20.3
+elif dachenglv >= 97:
+    pinji = 'S'
+    xishu = 20
+elif dachenglv >= 94:
+    pinji = 'AAA'
+    xishu = 16.8
+elif dachenglv >= 90:
+    pinji = 'AA'
+    xishu = 13.6
+elif dachenglv >= 80:
+    pinji = 'A'
+    xishu = 12.8
+elif dachenglv >= 75:
+    pinji = 'BBB'
+    xishu = 12
+elif dachenglv >= 70:
+    pinji = 'BB'
+    xishu = 11.2
+elif dachenglv >= 60:
+    pinji = 'B'
+    xishu = 9.6
+elif dachenglv >= 50:
+    pinji = 'C'
+    xishu = 8
+elif dachenglv >= 40:
+    pinji = 'D'
+    xishu = 6.4
+elif dachenglv >= 30:
+    pinji = 'D'
+    xishu = 4.8
+elif dachenglv >= 20:
+    pinji = 'D'
+    xishu = 3.2
+elif dachenglv >= 10:
+    pinji = 'D'
+    xishu = 1.6
+elif dachenglv >= 0:
+    pinji = 'D'
+    xishu = 0
+rt = math.floor((dingShu * dachenglv * xishu)/100)
+print('您的评级是' + pinji)
+print('单曲rt是' + rt)
